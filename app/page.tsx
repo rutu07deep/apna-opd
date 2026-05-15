@@ -1,6 +1,6 @@
 'use client'; 
 import React, { useState, useEffect } from 'react';
-import { Search, Star, User, X, Clock, Heart, Stethoscope, Baby, Pill, CheckCircle, MapPin, Zap } from 'lucide-react';
+import { Search, Star, User, X, Clock, Heart, Stethoscope, Baby, Pill, CheckCircle, MapPin, Zap, ArrowRight } from 'lucide-react';
 import { supabase } from '../lib/supabase';
 
 export default function MarketplaceHome() {
@@ -174,7 +174,7 @@ export default function MarketplaceHome() {
               <div className="pt-4">
                 <div className="mb-6">
                   <h3 className="text-2xl font-extrabold text-slate-900">Select Slot</h3>
-                  <p className="text-slate-500 font-medium">For {doc?.name || 'Doctor'}</p>
+                  <p className="text-slate-500 font-medium">For {selectedDoctor?.name|| 'Doctor'}</p>
                 </div>
                 <div className="grid grid-cols-3 gap-3 mb-8">
                   {selectedDoctor?.slots?.map((slot: string) => (
